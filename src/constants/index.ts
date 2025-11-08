@@ -9,7 +9,6 @@ import type {
 
 import {
   //mobile,
-  backend,
  // creator,
   flutter,
  // web,
@@ -73,11 +72,7 @@ const services: TService[] = [
     title: "Junior node js Developer",
     icon: node,
   },
-/*   {
-    title: "entry level Golang Developer",
-    icon: backend,
-  },
-   */
+
 ];
 
 const technologies: TTechnology[] = [
