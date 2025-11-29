@@ -56,7 +56,7 @@ export const config: TConfig = {
 
       phone: {
         span: "My Phone",
-        placeholder: "+49152116413935",
+        placeholder: "+4917677839266",
       },
       // message: {
       //   span: "Your Message",
@@ -68,7 +68,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `A highly motivated Flutter Developer with over 4 years of experience,
+      content: `A highly motivated Flutter Developer with over 5 years of experience,
       skilled in building innovative mobile and desktop applications.
        I have successfully worked in teams and as a freelancer,
         with the ability to handle entire projects independently.

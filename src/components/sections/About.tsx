@@ -54,7 +54,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
       >
-        A highly motivated Flutter Developer with over 4 years of experience,
+        A highly motivated Flutter Developer with over 5 years of experience,
          skilled in building innovative mobile and desktop applications.
           I have successfully worked in teams and as a freelancer,
            with the ability to handle entire projects independently.

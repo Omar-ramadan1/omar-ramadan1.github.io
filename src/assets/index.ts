@@ -20,6 +20,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
+import nestjs from "./tech/nestjs.webp";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
@@ -35,6 +36,7 @@ import tesla from "./company/tesla.png";
 import hwaya from "./company/Hwaya.png";
 import algorithm from "./company/algorithm.png";
 import Bot from "./company/Bot.png";
+import apps from "./company/28apps.jpg";
 import Alex from "./company/alex.jpeg";
 
 import carrent from "./carrent.png";
@@ -46,6 +48,8 @@ import pacademy from "./projects/pacdemy.jpg";
 import Face_Auth from "./projects/Face_Auth.png";
 import hotlier from "./projects/hotlier.jpeg";
 import hemada from "./projects/hemada.jpg";
+import lootatlas from "./projects/lootatlas.webp";
+
 
  
 import Atadel from "./projects/atadel.png";
@@ -73,6 +77,7 @@ export {
   javascript,
   mongodb,
   nodejs,
+  nestjs,
   alex,
   reactjs,
   redux,
@@ -88,6 +93,8 @@ export {
   starbucks,
   tesla,
   Bot,
+  apps,
+  
   Alex,
   carrent,
   Fel,
@@ -95,9 +102,11 @@ export {
   kafey_rep,
   Face_Auth,
   hemada,
+  
   hotlier,
   Atadel,
   jobit,
   tripguide,
-  pacademy
+  pacademy,
+  lootatlas
 };

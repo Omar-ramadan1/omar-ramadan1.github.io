@@ -9,9 +9,9 @@ import type {
 
 import {
   //mobile,
- // creator,
+  // creator,
   flutter,
- // web,
+  // web,
   javascript,
   typescript,
   html,
@@ -22,29 +22,32 @@ import {
   nodejs,
   mongodb,
   git,
- // figma,
- // docker,
+  // figma,
+  // docker,
   atadel,
   airdefence,
- // hwaya,
+  // hwaya,
   Bot,
+  apps,
+  lootatlas,
   Face_Auth,
   alex,
   hemada,
 
-  
+
   hotlier,
-  
+
   Fel,
   DetectId,
   //kafey_rep,
   pacademy,
-  
+
   //Atadel,
   apple,
   playstore,
   algorithm,
   node,
+  nestjs
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -67,10 +70,10 @@ const services: TService[] = [
     title: "Mid-Level Flutter Developer",
     icon: flutter,
   },
-  
+
   {
-    title: "Junior node js Developer",
-    icon: node,
+    title: "Junior nest js Developer",
+    icon: nestjs,
   },
 
 ];
@@ -129,7 +132,21 @@ const technologies: TTechnology[] = [
 const experiences: TExperience[] = [
   {
     title: "Flutter Developer",
-    companyName: "BOT",
+    companyName: "28apps-Germany",
+    icon: apps,
+    iconBg: "#ffffffff",
+    date: "April 2025 - Current",
+    points: [
+      "Developed advanced map features for gaming applications, allowing players to create and manage pins with interactive animations, filtering capabilities, and efficient local data storage for offline usability.",
+      "Built AR measurement functionality for iOS using ARKit, enabling users to accurately measure height and width through depth-based detection with the iPhone camera.",
+      "Collaborated within a large, well-structured development team using Scrum methodology, continuously improving communication and professional business-German proficiency.",
+      "Successfully took the opportunity to expand backend expertise by learning NestJS and implementing new server-side features with real production integration.",
+    ],
+
+  },
+  {
+    title: "Flutter Developer",
+    companyName: "BOT-Dubai",
     icon: Bot,
     iconBg: "#383E56",
     date: "March 2023 - Sep 2024",
@@ -141,7 +158,7 @@ const experiences: TExperience[] = [
   },
   {
     title: "Flutter Developer",
-    companyName: "Pixel Stamp",
+    companyName: "Pixel Stamp-Egypt",
     icon: atadel,
     iconBg: "#ffffffff",
     date: "Jan 2021 – March 2023",
@@ -175,10 +192,10 @@ const experiences: TExperience[] = [
       "Gained hands-on experience with GitHub for version control, collaborating on code repositories, and managing pull requests, which enhanced my understanding of collaborative development practices.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Engaged in code reviews and pair programming sessions, which provided insights into best practices, coding standards, and team collaboration techniques.",
-      
-     
+
+
     ],
-  },{
+  }, {
     title: "Bachelor's degree student",
     companyName: "Alexandria university",
     icon: alex,
@@ -188,8 +205,8 @@ const experiences: TExperience[] = [
       "Actively participated in the Management Information Systems Club, collaborating with peers to explore the latest trends and technologies in the field of information systems.",
       "Engaged in discussions and presentations on emerging technologies like cloud computing and big data analytics, promoting knowledge sharing and continuous learning among members.",
       "Engaged in code reviews and pair programming sessions, which provided insights into best practices, coding standards, and team collaboration techniques.",
-      
-     
+
+
     ],
   },
 ];
@@ -223,6 +240,25 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
+    name: "LootAtlas",
+    description:
+      "Explore the worlds of your favorite games with Loot Atlas! Discover hidden treasures, rare items, secret locations, and much more. Perfect for players who want to leave no stone unturned and make the most of their adventures. Now featuring detailed unofficial maps for Black Myth: Wukong and Elden Ring!",
+    tags: [
+      {
+        name: "flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+    ],
+    image: lootatlas,
+    sourceCodeLink: "https://github.com/",
+    AppleStore: "https://apps.apple.com/us/app/lootatlas/id6446490363",
+    PlayStore: "https://play.google.com/store/apps/details?id=de.apps28.map_tool&hl=en",
+  },
+  {
     name: "FEL",
     description:
       "Football Prediction League is a game to earn points by predicting the results of your favorite league matches",
@@ -241,7 +277,7 @@ const projects: TProject[] = [
     AppleStore: "https://apps.apple.com/us/app/fel-league/id6464472764",
     PlayStore: "https://play.google.com/store/apps/details?id=com.felapp.sports.football_appnew&hl=en",
   },
- 
+
   // {
   //   name: "Atadel",
   //   description:
@@ -284,8 +320,8 @@ const projects: TProject[] = [
     name: "face authentication",
     description:
       "Managing external sites and the presence of the fingerprint device is difficult \n\n"
-      +"Monitor employees throughout the day and determine their presence during working hours, because attendance registration is by face and location \n\n"
-      +"Detailed and accurate reports on everything related to attendance and departure daily-week-monthly",
+      + "Monitor employees throughout the day and determine their presence during working hours, because attendance registration is by face and location \n\n"
+      + "Detailed and accurate reports on everything related to attendance and departure daily-week-monthly",
     tags: [
       {
         name: "flutter",
@@ -300,15 +336,15 @@ const projects: TProject[] = [
     sourceCodeLink: "https://github.com/",
     AppleStore: "",
     PlayStore: "https://play.google.com/store/apps/details?id=com.Bot.face_auth&hl=en",
-  },{
+  }, {
     name: "ID Scanner",
     description:
       "ID Scanner is a private app designed to scan passports, visas, and local IDs, with a focus on Arabic identification documents \n\n"
-      +"It is used by hotels and other businesses that need to efficiently collect customer data for bookings \n\n"
-      +" The app streamlines the data entry process, reducing manual errors and saving time for staff, making it a valuable tool for establishments requiring accurate and quick ID verification \n\n"
-   
-    +"The app is not available on the Play Store as it is tailored for private business use \n\n",
-      tags: [
+      + "It is used by hotels and other businesses that need to efficiently collect customer data for bookings \n\n"
+      + " The app streamlines the data entry process, reducing manual errors and saving time for staff, making it a valuable tool for establishments requiring accurate and quick ID verification \n\n"
+
+      + "The app is not available on the Play Store as it is tailored for private business use \n\n",
+    tags: [
       {
         name: "flutter",
         color: "blue-text-gradient",
@@ -327,8 +363,8 @@ const projects: TProject[] = [
     name: "Hotlier",
     description:
       "Hotlier is a cutting-edge app designed to streamline the booking process for hotels and guests in Saudi Arabia \n\n"
-      +"With Hotlier, guests can easily book rooms, while hotels can upload and manage their offers seamlessly \n\n"
-      +"This app enhances the hospitality experience by providing a user-friendly platform for both parties.",
+      + "With Hotlier, guests can easily book rooms, while hotels can upload and manage their offers seamlessly \n\n"
+      + "This app enhances the hospitality experience by providing a user-friendly platform for both parties.",
     tags: [
       {
         name: "flutter",
@@ -343,11 +379,11 @@ const projects: TProject[] = [
     sourceCodeLink: "https://github.com/",
     AppleStore: "https://appadvice.com/app/d9-87-d9-88-d8-aa-d9-84-d9-8a-d8-b1-d9-83-d8-a7-d8-b1-d8-af/1543597269",
     PlayStore: "https://apkpure.com/%D9%87%D9%88%D8%AA%D9%84%D9%8A%D8%B1-%D9%83%D8%A7%D8%B1%D8%AF/com.hoteliercard",
-  },{
+  }, {
     name: "Hemada academy",
     description:
       "Hemada Academy is an  educational app designed to bridge the gap between an popular Hemada called Hemada in egypt and his students.\n \n Hemada Academy,  can  share lectures, exams, and questions, while students can easily access and respond to them. This seamless interaction fosters a dynamic learning environment"
-,    tags: [
+    , tags: [
       {
         name: "flutter",
         color: "blue-text-gradient",
