@@ -46,7 +46,6 @@ import {
   apple,
   playstore,
   algorithm,
-  node,
   nestjs
 } from "../assets";
 
