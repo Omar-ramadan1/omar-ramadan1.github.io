@@ -39,10 +39,13 @@ import Bot from "./company/Bot.png";
 import apps from "./company/28apps.jpg";
 import Alex from "./company/alex.jpeg";
 
+
 import carrent from "./carrent.png";
 import Fel from "./projects/Fel.png";
 import DetectId from "./projects/detectid.jpg";
 import kafey_rep from "./projects/kafey_rep.png";
+import hiapp from "./projects/hiapp.webp";
+
 
 import pacademy from "./projects/pacdemy.jpg";
 import Face_Auth from "./projects/Face_Auth.png";
@@ -94,6 +97,7 @@ export {
   tesla,
   Bot,
   apps,
+  hiapp,
   
   Alex,
   carrent,

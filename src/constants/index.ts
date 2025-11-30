@@ -30,6 +30,7 @@ import {
   Bot,
   apps,
   lootatlas,
+  hiapp,
   Face_Auth,
   alex,
   hemada,
@@ -71,7 +72,7 @@ const services: TService[] = [
   },
 
   {
-    title: "Junior nest js Developer",
+    title: "Junior NestJs Developer",
     icon: nestjs,
   },
 
@@ -256,6 +257,25 @@ const projects: TProject[] = [
     sourceCodeLink: "https://github.com/",
     AppleStore: "https://apps.apple.com/us/app/lootatlas/id6446490363",
     PlayStore: "https://play.google.com/store/apps/details?id=de.apps28.map_tool&hl=en",
+  },
+   {
+    name: "hiApp",
+    description:
+      "HiApp is your all-in-one city guide for Hildesheim, Germany. Discover local news, events, dining, shopping, and services at your fingertips. Stay connected with real-time updates and explore the best of Hildesheim with ease.",
+    tags: [
+      {
+        name: "flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+    ],
+    image: hiapp,
+    sourceCodeLink: "https://github.com/",
+    AppleStore: "https://apps.apple.com/us/app/hiapp/id1645865124",
+    PlayStore: "https://play.google.com/store/apps/details?id=de.stadtwerkehildesheim.hildesheimapp&hl=en",
   },
   {
     name: "FEL",
