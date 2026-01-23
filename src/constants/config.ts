@@ -46,7 +46,7 @@ export const config: TConfig = {
   },
   hero: {
     name: "Omar Abdelkader",
-    p: ["Experienced Flutter developer", ""],
+    p: ["Experienced Software Engineer", ""],
   },
   contact: {
     p: "Get in touch",

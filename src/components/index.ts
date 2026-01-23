@@ -23,7 +23,7 @@ export {
   Experience,
   Works,
   Feedbacks,
- Contact,
+  Contact,
   CanvasLoader,
   EarthCanvas,
   BallCanvas,

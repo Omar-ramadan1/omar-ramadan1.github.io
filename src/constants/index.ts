@@ -152,8 +152,10 @@ const experiences: TExperience[] = [
     date: "March 2023 - Sep 2024",
     points: [
       "added of In app purchase , Store functionality include handling purchases, most of Groups functionality, fixing bugs and performance issues (main role) and integrated UI designs in an entertainment FootBall App",
+      "Integrated AI models for object detection within a Flutter application, including model integration, real-time inference, and UI visualization",
       "Participated in developing ERP mobile application for Transfering money, which I was responsible for receiving, filtering and delivering the data for both Frontend Team and Backend team as the application has local storage 	and update the server when there is connection available",
       "Participated in facial recognition app and enhanced the system to detect fake user by adding a liveness AI detector",
+
     ],
   },
   {

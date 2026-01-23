@@ -54,11 +54,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
       >
-        A highly motivated Flutter Developer with over 5 years of experience,
-         skilled in building innovative mobile and desktop applications.
-          I have successfully worked in teams and as a freelancer,
-           with the ability to handle entire projects independently.
-            I bring a proactive, solution-oriented mindset and a strong desire to continually learn and improve.
+       A highly motivated Software Engineer specializing in Flutter,
+      with over 5 years of experience building innovative mobile and desktop applications.
+      Experienced in both team-based and freelance environments, with a proven ability to manage entire projects independently,
+      Known for a proactive, solution-oriented mindset and a strong commitment to continuous learning and improvement.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 max-sm:justify-center">
