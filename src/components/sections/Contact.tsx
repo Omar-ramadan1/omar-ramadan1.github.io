@@ -1,17 +1,10 @@
-import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
 
 import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
-import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { useLanguage } from "../../context/LanguageContext";
-
-const INITIAL_STATE = Object.fromEntries(
-  Object.keys(config.contact.form).map((input) => [input, ""])
-);
 
 // const emailjsConfig = {
 //   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -20,20 +13,7 @@ const INITIAL_STATE = Object.fromEntries(
 // };
 
 const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
-  const [form, setForm] = useState(INITIAL_STATE);
   const { t } = useLanguage();
-//   const [
-//     loading,
-//      setLoading] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
-  ) => {
-    if (e === undefined) return;
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
 
 //   const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
 //     if (e === undefined) return;
@@ -79,50 +59,48 @@ const Contact = () => {
       >
         <Header useMotion={false} p={t.contact.p} h2={t.contact.h2} />
 
-        <form
-          // @ts-expect-error
-          ref={formRef}
-        //  onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          {Object.keys(t.contact.form).map((input) => {
-            const { span, placeholder } =
-              t.contact.form[input as keyof typeof t.contact.form];
-            const Component = input === "message" ? "textarea" : "input";
+        <div className="mt-12 flex flex-col gap-8">
+          <label className="flex flex-col">
+            <span className="mb-4 font-medium text-white">{t.contact.form.email.span}</span>
+            <a
+              href="mailto:o.abdelkader05@gmail.com"
+              className="bg-tertiary rounded-lg px-6 py-4 font-medium text-white hover:opacity-80 transition-opacity"
+            >
+              {t.contact.form.email.placeholder}
+            </a>
+          </label>
 
-            return (
-              <label key={input} className="flex flex-col">
-                
-                <span className="mb-4 font-medium text-white">{span}</span>
-                <Component
-                  type={input === "email" ? "email" : "text"}
-                  name={input}
-                  value={form[`${input}`]}
-                  onChange={handleChange}
-                  readOnly
-                  
-                  onFocus={(e)=> e.target.setAttribute}
-                  placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
-                  {...(input === "message" && { rows: 7 })}
-                />
-                
-              </label>
-              
-            );
-          })}
-         <div><a href="https://www.linkedin.com/in/omar-ramadan-2b86a4226/" target="_blank"
-         rel="noopener"
-         style={{display:'inline-block',marginRight:'20px'}}
-         >
-                    LinkedIn</a><a href="https://github.com/Omar-ramadan1" target="_blank"
-         rel="noopener"
-         style={{display:'inline-block',}}
-         >
-                    Github</a>
-                    
-                    </div>
-        </form>
+          <label className="flex flex-col">
+            <span className="mb-4 font-medium text-white">{t.contact.form.phone.span}</span>
+            <a
+              href="https://wa.me/4917677839266"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-tertiary rounded-lg px-6 py-4 font-medium text-white hover:opacity-80 transition-opacity"
+            >
+              {t.contact.form.phone.placeholder}
+            </a>
+          </label>
+
+          <div className="flex gap-5">
+            <a
+              href="https://www.linkedin.com/in/omar-ramadan-2b86a4226/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:opacity-80 transition-opacity"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/Omar-ramadan1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:opacity-80 transition-opacity"
+            >
+              Github
+            </a>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div

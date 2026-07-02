@@ -21,7 +21,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   PlayStore,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full sm:w-auto flex justify-center">
       <Tilt
         glareEnable
         tiltEnable
@@ -29,7 +29,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
         tiltMaxAngleY={30}
         glareColor="#aaa6c3"
       >
-        <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[300px]">
+        <div className="bg-tertiary w-full max-w-[360px] rounded-2xl p-5 sm:w-[300px]">
           <div className="relative h-[230px] w-full">
             <img
               src={image}
@@ -106,7 +106,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-10">
+      <div className="mt-10 flex flex-wrap justify-center gap-7 sm:justify-start">
         {translatedProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
