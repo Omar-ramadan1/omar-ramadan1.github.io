@@ -135,7 +135,7 @@ const experiences: TExperience[] = [
     companyName: "28apps-Germany",
     icon: apps,
     iconBg: "#ffffffff",
-    date: "April 2025 - Current",
+    date: "April 2025 - July 2026",
     points: [
       "Developed advanced map features for gaming applications, allowing players to create and manage pins with interactive animations, filtering capabilities, and efficient local data storage for offline usability.",
       "Built AR measurement functionality for iOS using ARKit, enabling users to accurately measure height and width through depth-based detection with the iPhone camera.",

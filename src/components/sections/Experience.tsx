@@ -10,7 +10,7 @@ import { experiences } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { Header } from "../atoms/Header";
 import { TExperience } from "../../types";
-import { config } from "../../constants/config";
+import { useLanguage } from "../../context/LanguageContext";
 
 const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
@@ -57,13 +57,19 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
 };
 
 const Experience = () => {
+  const { t } = useLanguage();
+  const translatedExperiences = experiences.map((exp, i) => ({
+    ...exp,
+    ...(t.experience.items[i] ?? {}),
+  }));
+
   return (
     <>
-      <Header useMotion={true} {...config.sections.experience} />
+      <Header useMotion={true} p={t.experience.p} h2={t.experience.h2} />
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {translatedExperiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}
         </VerticalTimeline>

@@ -7,6 +7,7 @@ import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { useLanguage } from "../../context/LanguageContext";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -21,6 +22,7 @@ const INITIAL_STATE = Object.fromEntries(
 const Contact = () => {
   const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
   const [form, setForm] = useState(INITIAL_STATE);
+  const { t } = useLanguage();
 //   const [
 //     loading,
 //      setLoading] = useState(false);
@@ -75,7 +77,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="bg-black-100 flex-[0.75] rounded-2xl p-8"
       >
-        <Header useMotion={false} {...config.contact} />
+        <Header useMotion={false} p={t.contact.p} h2={t.contact.h2} />
 
         <form
           // @ts-expect-error
@@ -83,9 +85,9 @@ const Contact = () => {
         //  onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
-          {Object.keys(config.contact.form).map((input) => {
+          {Object.keys(t.contact.form).map((input) => {
             const { span, placeholder } =
-              config.contact.form[input as keyof typeof config.contact.form];
+              t.contact.form[input as keyof typeof t.contact.form];
             const Component = input === "message" ? "textarea" : "input";
 
             return (

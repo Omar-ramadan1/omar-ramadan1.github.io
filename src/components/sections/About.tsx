@@ -1,14 +1,14 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { 
+import {
  // color,
    motion } from "framer-motion";
 
 import { services } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn } from "../../utils/motion";
-import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { useLanguage } from "../../context/LanguageContext";
 
 interface IServiceCard {
   index: number;
@@ -46,22 +46,25 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const { t } = useLanguage();
+  const translatedServices = services.map((s, i) => ({
+    ...s,
+    title: t.services[i]?.title ?? s.title,
+  }));
+
   return (
     <>
-      <Header useMotion={true} {...config.sections.about} />
+      <Header useMotion={true} p={t.about.p} h2={t.about.h2} />
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
       >
-       A highly motivated Software Engineer specializing in Flutter,
-      with over 5 years of experience building innovative mobile and desktop applications.
-      Experienced in both team-based and freelance environments, with a proven ability to manage entire projects independently,
-      Known for a proactive, solution-oriented mindset and a strong commitment to continuous learning and improvement.
+        {t.about.content}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 max-sm:justify-center">
-        {services.map((service, index) => (
+        {translatedServices.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>

@@ -2,16 +2,24 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../../constants/styles";
-import { navLinks } from "../../constants";
-import { 
+import { navLinks as _navLinks } from "../../constants";
+import {
   //logo,
    menu, close } from "../../assets";
 import { config } from "../../constants/config";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, t, toggleLanguage } = useLanguage();
+
+  const translatedNavLinks = [
+    { id: 'about', title: t.nav.about },
+    { id: 'work', title: t.nav.work },
+    { id: 'contact', title: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +80,8 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="hidden list-none flex-row gap-10 sm:flex">
-          {navLinks.map((nav) => (
+        <ul className="hidden list-none flex-row gap-10 sm:flex items-center">
+          {translatedNavLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
@@ -83,6 +91,14 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li>
+            <button
+              onClick={toggleLanguage}
+              className="ml-4 rounded-md border border-secondary px-3 py-1 text-[14px] font-semibold text-secondary hover:border-white hover:text-white transition-colors"
+            >
+              {language === 'en' ? 'DE' : 'EN'}
+            </button>
+          </li>
         </ul>
 
         <div className="flex flex-1 items-center justify-end sm:hidden">
@@ -99,7 +115,7 @@ const Navbar = () => {
             } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
-              {navLinks.map((nav) => (
+              {translatedNavLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins cursor-pointer text-[16px] font-medium ${
@@ -112,6 +128,14 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={toggleLanguage}
+                  className="rounded-md border border-secondary px-3 py-1 text-[14px] font-semibold text-secondary hover:border-white hover:text-white transition-colors"
+                >
+                  {language === 'en' ? 'DE' : 'EN'}
+                </button>
+              </li>
             </ul>
           </div>
         </div>

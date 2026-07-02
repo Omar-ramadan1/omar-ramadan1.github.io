@@ -12,11 +12,9 @@ import {
 } from "./components";
 import { useEffect } from "react";
 import { config } from "./constants/config";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const App = () => {
-  
-  <BrowserRouter basename={import.meta.env.BASE_URL}>
-  </BrowserRouter>
   useEffect(() => {
     if (document.title !== config.html.title) {
       document.title = config.html.title;
@@ -24,6 +22,7 @@ const App = () => {
   }, []);
 
   return (
+    <LanguageProvider>
     <BrowserRouter>
       <div className="bg-primary relative z-0">
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
@@ -41,6 +40,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+    </LanguageProvider>
   );
 };
 

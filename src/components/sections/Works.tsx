@@ -1,15 +1,15 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { apple, 
+import { apple,
   //github,
    playstore } from "../../assets";
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn } from "../../utils/motion";
-import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
+import { useLanguage } from "../../context/LanguageContext";
 
 const ProjectCard: React.FC<{ index: number } & TProject> = ({
   index,
@@ -87,21 +87,27 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 };
 
 const Works = () => {
+  const { t } = useLanguage();
+  const translatedProjects = projects.map((p, i) => ({
+    ...p,
+    description: t.works.projectDescriptions[i] ?? p.description,
+  }));
+
   return (
     <>
-      <Header useMotion={true} {...config.sections.works} />
+      <Header useMotion={true} p={t.works.p} h2={t.works.h2} />
 
       <div className="flex w-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
         >
-          {config.sections.works.content}
+          {t.works.content}
         </motion.p>
       </div>
 
       <div className="mt-10 flex flex-wrap gap-10">
-        {projects.map((project, index) => (
+        {translatedProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
