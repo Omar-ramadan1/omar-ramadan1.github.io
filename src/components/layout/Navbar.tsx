@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../../constants/styles";
-import { navLinks as _navLinks } from "../../constants";
 import {
   //logo,
    menu, close } from "../../assets";
